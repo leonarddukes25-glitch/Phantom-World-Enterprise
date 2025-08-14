@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Dynasty</title>
+
+  <!-- Favicon / PWA icons using lion.png -->
+  <link rel="icon" type="image/png" href="images/lion.png" />
+  <link rel="apple-touch-icon" href="images/lion.png" />
+  <meta name="theme-color" content="#111" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Digital Dynasty" />
+  <meta property="og:description" content="Your vision, powered by AI and automation." />
+  <meta property="og:image" content="images/lion.png" />
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Site Header w/ lion.png brand symbol on all pages -->
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/lion.png" alt="Digital Dynasty Lion" class="logo" />
+      <div class="brand-text">
+        <h1>Digital Dynasty</h1>
+        <p>Your vision, powered by AI & automation.</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="master.html" class="nav-link">Master Panel</a>
+      <a href="left-arm.html" class="nav-link">Left Arm</a>
+      <a href="vaults.html" class="nav-link">Vaults</a>
+      <a href="mailto:contact@digitaldynasty.com" class="btn">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h2>Automate. Scale. Own your data.</h2>
+        <p>We build AI-driven systems that move like you do—fast, precise, and always on brand.</p>
+        <div class="hero-actions">
+          <a href="master.html" class="btn">Enter Master Panel</a>
+          <a href="docs/index.html" class="btn btn-ghost">View Docs</a>
+        </div>
+      </div>
+      <!-- subtle watermark with lion.png -->
+      <img src="images/lion.png" alt="" class="hero-mark" aria-hidden="true" />
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h3>AI Automation</h3>
+        <p>Workflows, agents, and triggers that run the business while you build the brand.</p>
+      </div>
+      <div class="card">
+        <h3>Web & Apps</h3>
+        <p>Firebase + serverless backends, real-time dashboards, and secure file flows.</p>
+      </div>
+      <div class="card">
+        <h3>Trust & Structure</h3>
+        <p>Organize entities, roles, and records—built to scale and built to last.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="images/lion.png" alt="" class="brand-mark" />
+      <span>© 2025 Digital Dynasty. All rights reserved.</span>
+      <a href="https://duke-dynasty.web.app" class="footer-link">Live Site</a>
+    </div>
+  </footer>
+
+  <!-- LEO BUTTON (lion.svg) -->
+  <button class="leo-button" id="leoBtn" aria-label="Open Leo">
+    <img src="images/lion.svg" alt="Leo" />
+  </button>
+
+  <!-- Leo Panel -->
+  <div class="leo-panel" id="leoPanel" aria-hidden="true">
+    <div class="leo-card">
+      <div class="leo-card-head">
+        <img src="images/lion.png" alt="" class="leo-avatar" />
+        <strong>Leo • Digital Dynasty</strong>
+        <button class="leo-close" id="leoClose" aria-label="Close Leo">&times;</button>
+      </div>
+      <div class="leo-card-body">
+        <p>What do you want to do?</p>
+        <div class="leo-actions">
+          <a href="master.html" class="btn">Open Master Panel</a>
+          <a href="mailto:contact@digitaldynasty.com" class="btn btn-ghost">Email Leo</a>
+          <a href="docs/index.html" class="btn btn-ghost">Read Docs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Leo button toggle
+    const leoBtn = document.getElementById('leoBtn');
+    const leoPanel = document.getElementById('leoPanel');
+    const leoClose = document.getElementById('leoClose');
+
+    function openLeo(){ leoPanel.classList.add('open'); leoPanel.setAttribute('aria-hidden','false'); }
+    function closeLeo(){ leoPanel.classList.remove('open'); leoPanel.setAttribute('aria-hidden','true'); }
+
+    leoBtn.addEventListener('click', openLeo);
+    leoClose.addEventListener('click', closeLeo);
+    leoPanel.addEventListener('click', (e)=>{ if(e.target === leoPanel) closeLeo(); });
+    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeLeo(); });
+  </script>
+</body>
+</html>

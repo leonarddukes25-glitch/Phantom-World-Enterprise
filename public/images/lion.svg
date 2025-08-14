@@ -1,0 +1,15 @@
+﻿<!-- Simple lion/shield SVG placeholder -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5c542"/>
+      <stop offset="1" stop-color="#d38b2a"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="20" fill="#111"/>
+  <path d="M100 20 L160 50 L160 110 Q100 170 40 110 L40 50 Z" fill="url(#g)" stroke="#f5f5f5" stroke-width="3"/>
+  <circle cx="80" cy="85" r="8" fill="#111"/>
+  <circle cx="120" cy="85" r="8" fill="#111"/>
+  <path d="M75 120 Q100 135 125 120" fill="none" stroke="#111" stroke-width="5" stroke-linecap="round"/>
+  <path d="M60 70 Q100 40 140 70" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+</svg>

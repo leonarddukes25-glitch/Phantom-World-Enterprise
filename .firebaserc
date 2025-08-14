@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "duke-dynasty",
+    "type .firebaserc": "duke-dynasty"
+  },
+  "targets": {},
+  "etags": {}
+}
